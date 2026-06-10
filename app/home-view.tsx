@@ -266,14 +266,6 @@ export default function HomeView({ content, videoId, bulletins }: Props) {
               <p className="text-2xl font-bold text-gray-900">{content.staff.pastor_name}</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-8 text-center border border-gray-100 hover:border-[#b7e4c7] hover:shadow-md transition-all flex flex-col justify-center">
-              <p className="text-[#40916c] text-xs font-bold tracking-widest uppercase mb-3">시무장로</p>
-              <div className="space-y-1">
-                {content.staff.elders.map((name) => (
-                  <p key={name} className="font-bold text-gray-900">{name}</p>
-                ))}
-              </div>
-            </div>
-            <div className="bg-gray-50 rounded-xl p-8 text-center border border-gray-100 hover:border-[#b7e4c7] hover:shadow-md transition-all flex flex-col justify-center">
               <p className="text-[#40916c] text-xs font-bold tracking-widest uppercase mb-3">부교역자</p>
               {content.staff.ministers.map((m) => (
                 <div key={m.name}>
@@ -281,6 +273,14 @@ export default function HomeView({ content, videoId, bulletins }: Props) {
                   <p className="text-gray-400 text-xs mt-1">{m.role}</p>
                 </div>
               ))}
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8 text-center border border-gray-100 hover:border-[#b7e4c7] hover:shadow-md transition-all flex flex-col justify-center">
+              <p className="text-[#40916c] text-xs font-bold tracking-widest uppercase mb-3">시무장로</p>
+              <div className="space-y-1">
+                {content.staff.elders.map((name) => (
+                  <p key={name} className="font-bold text-gray-900">{name}</p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
